@@ -11,9 +11,19 @@ class GamesController < ApplicationController
         render json: game
     end
 
-    def update
-        game = Game.find(params[:id])
+    def update #Update
+        game = Game.find(params[:id]) 
         game.update
+        render json: game
+    end
+
+    def destroy
+        game = Game.find(params[:id])
+        game.destroy
+    end
+
+    def show
+        game = Game.find(params[:id])
         render json: game
     end
 
