@@ -1,3 +1,8 @@
 class UsersController < ApplicationController
-    has_many :games
+
+    def index
+        user = User.all
+        render json: user
+    end
+
 end
