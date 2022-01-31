@@ -1,19 +1,19 @@
 class GamesController < ApplicationController
     #fullCRUD
 
-    def index #Render All
+    def index
         games = Game.all
         render json: games
     end
 
-    def create #Create One
-        game = Game.create
+    def create
+        game = Game.create(game_params)
         render json: game
     end
 
-    def update #Update
-        game = Game.find(params[:id]) 
-        game.update
+    def update
+        game = Game.find(params[:id])
+        game.update(game_params)
         render json: game
     end
 

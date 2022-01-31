@@ -19,11 +19,11 @@
 #   end
   
 
-# user1 = User.create(username: "Chronx", age: 30 , competitive: false)
-# user2 = User.create(username: "Juggernaut", age: 23, competitive: true)
-# user3 = User.create(username: "CantTouchThis", age: 28, competitive: true)
-# user4 = User.create(username: "FauxHaux", age: 21, competitive: false)
-# user5 = User.create(username: "Vanquisher", age: 20, competitive: false)
+user1 = User.create(username: "Chronx", age: 30 , competitive: false)
+user2 = User.create(username: "Juggernaut", age: 23, competitive: true)
+user3 = User.create(username: "CantTouchThis", age: 28, competitive: true)
+user4 = User.create(username: "FauxHaux", age: 21, competitive: false)
+user5 = User.create(username: "Vanquisher", age: 20, competitive: false)
 
 game1 = Game.create(title: "Final Fantasy VII Remake", release_year: 2020, genre: "RPG", user_id: 1)
 game2 = Game.create(title: "Call of Duty: Vanguard", release_year: 2021, genre: "FPS", user_id: 2)
