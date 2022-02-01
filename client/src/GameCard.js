@@ -15,16 +15,16 @@ function GameCard({game, deleteGame, user, editGame}){
     function handleEditButtonClick(){
         setEditForm(!editForm)
             !editForm ? setEditButton("Hide Edit Form") : setEditButton("Show Edit Form")
-        }    
+        }        
 
     return (
         <div>
             <h1> {game.title} </h1>
             <h2> {game.release_year} </h2>
-            <h3> {game.genre} </h3>  
+            <h3> {game.genre} </h3> 
             <button onClick={e => handleDelete(game)}>Delete</button>
             <button onClick={e => handleEditButtonClick()}> {editButton} </button>
-            {editForm ? <EditForm handleEditButtonClick={handleEditButtonClick} editGame={editGame} game={game} user={user}/> : null} 
+            {editForm ? <EditForm handleEditButtonClick={handleEditButtonClick} editGame={editGame} game={game} user={user}/> : null}     
         </div>
     )
 }

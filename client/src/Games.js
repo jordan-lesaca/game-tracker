@@ -31,13 +31,12 @@ function Games({user}){
         .then(setGames)    
         }, [] )
 console.log(games)
-
     return (
+        
         <div>
             <GameForm addGame={addGame} user={user}/>
-            {games.map(game => <GameCard game={game} key={game.id} user={user} editGame={editGame} deleteGame={deleteGame}/>)} 
+            {games.map(game => <GameCard game={game} key={game.id} deleteGame={deleteGame} editGame={editGame} user={user}/>)} 
         </div>
     )
 }
-
 export default Games
