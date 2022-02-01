@@ -23,6 +23,7 @@ function GameCard({game, deleteGame, user, editGame}){
             <h2> {game.release_year} </h2>
             <h3> {game.genre} </h3>  
             <button onClick={e => handleDelete(game)}>Delete</button>
+            <button onClick={e => handleEditButtonClick()}> {editButton} </button>
             {editForm ? <EditForm handleEditButtonClick={handleEditButtonClick} editGame={editGame} game={game} user={user}/> : null} 
         </div>
     )
