@@ -5,7 +5,18 @@ function SignupForm({setUser}){
     const [ age, setAge ] = useState("")
     const [ competitive, setCompetitive ] = useState("")
 
-
+    function handleSubmit(e){
+        e.preventDefault()
+        fetch("/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json",
+            },
+            body: JSON.stringify({username, age, competitive}),
+        }).then(r => { r.json()
+            .then(user => setUser(user))
+        })
+    }
 
     return (
         <div>
