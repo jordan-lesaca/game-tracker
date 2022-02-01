@@ -6,4 +6,8 @@ class SessionsController < ApplicationController
         render json: user
     end
 
+    def destroy #Logout
+        session.delete :user_id
+    end
+
 end
