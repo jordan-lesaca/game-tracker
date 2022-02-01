@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import GameCard from './GameCard'
-import GameForm from '/GameForm'
+import GameForm from './GameForm'
 
 function Games({user}){
     const [ games, setGames ] = useState([])
